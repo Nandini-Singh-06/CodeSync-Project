@@ -1,0 +1,166 @@
+.CodeEditorPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1d1c1c;
+  padding: 0 20px; /* Adjust padding as needed */
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right:550px;
+}
+
+.logo {
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+}
+
+.title {
+  color: white;
+  margin-left: 10px; /* Adjust spacing between logo and title */
+  font-size: 20px;
+}
+
+.center-section {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.run-button button {
+  padding: 5px 20px; /* Adjust padding as needed */
+  background-color: #340e72; /* Adjust button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.run-button:hover{
+  background-color:aqua;
+}
+
+
+.right-section {
+  display: flex;
+  align-items: center;
+  
+}
+
+.nav-links {
+  display: flex;
+  margin-left: 600px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px; /* Adjust spacing between links */
+}
+
+.nav-links a:last-child {
+  margin-right: 0; /* Remove margin from the last link */
+}
+.nav-links a:hover {
+  background-color: #340e72; /* Adjust hover color */
+}
+
+
+.human-logo {
+  margin-left: 20px; /* Adjust spacing between elements */
+}
+
+.human-logo img {
+  width: 30px; /* Adjust size as needed */
+  height: 35px; /* Adjust size as needed */
+}
+
+
+
+
+
+
+
+
+
+
+
+.content {
+  flex-grow: 1; /* Fill remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.pane1,
+.pane2,
+.pane3 {
+  height: calc(50% - 21px); /* Adjusted height to accommodate the top navigation bar */
+}
+
+.SplitPane {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #484747;
+}
+
+.Resizer.vertical {
+  width: 10px;
+  background-color: black;
+  cursor: col-resize;
+}
+
+.Resizer.vertical:hover {
+  background-color: darkgray;
+}
+
+/* Navigation menu styles */
+.pane3 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.pane3 li {
+  float: left;
+}
+
+.pane3 li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.pane3 li a:hover:not(.active) {
+  background-color:#7a3595;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

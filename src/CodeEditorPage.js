@@ -1,14 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SplitPane from 'react-split-pane';
 import './CodeEditorPage.css';
+import CodeEditorHandler from './CodeEditorHandler'; 
 
 function NavigationMenu() {
+  const [input, setInput] = useState('');
+  const [output, setOutput] = useState('');
+  const [showInputOutput, setShowInputOutput] = useState(false); // State to manage visibility of input/output section
+
+  const handleInputChange = (event) => {
+    setInput(event.target.value);
+  };
+
+  // const handleRunClick = async () => {
+    
+  // };
+
+  const toggleInputOutput = () => {
+    setShowInputOutput(!showInputOutput); // Toggle the visibility state
+  };
+
   return (
-    <ul>
-      <li><a href="#askai">Ask AI</a></li>
-      <li><a href="#in&ou">Input & Output</a></li>
-      <li><a href="#chatroom"> ChatRoom</a></li>
-    </ul>
+    <div className="navigation-menu">
+      <ul>
+        <li><a href="#askai">Ask AI</a></li>
+        <li><a href="#in&ou" onClick={toggleInputOutput}>Input & Output</a></li>
+        <li><a href="#chatroom">ChatRoom</a></li>
+      </ul>
+      {showInputOutput && (
+        <div className="input-output-section">
+          <textarea
+            className="input-textarea"
+            placeholder="Enter input here..."
+            value={input}
+            onChange={handleInputChange}
+          ></textarea>
+          {/* <button className="executerun-button" onClick={handleRunClick}>Execute</button> */}
+          <textarea
+            className="output-textarea"
+            placeholder="Output will be displayed here..."
+            value={output}
+            readOnly
+          ></textarea>
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -39,9 +75,6 @@ function TopNavigationBar() {
   );
 }
 
-
-
-
 function CodeEditorPage() {
   return (
     <div className="CodeEditorPage">
@@ -50,7 +83,7 @@ function CodeEditorPage() {
         <SplitPane split="vertical" defaultSize="25%">
           <div className="pane1"></div>
           <SplitPane split="vertical" defaultSize="50%">
-            <div>Pane 2</div>
+            <CodeEditorHandler />
             <div className="pane3">
               <NavigationMenu />
             </div>

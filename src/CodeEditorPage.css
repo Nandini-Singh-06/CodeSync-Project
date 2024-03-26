@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #1d1c1c;
-  padding: 0 20px; /* Adjust padding as needed */
+  padding: 0 20px; 
 }
 
 .left-section {
@@ -24,8 +24,8 @@
 }
 
 .logo {
-  width: 30px; /* Adjust size as needed */
-  height: 30px; /* Adjust size as needed */
+  width: 30px; 
+  height: 30px; 
 }
 
 .title {
@@ -41,8 +41,8 @@
 }
 
 .run-button button {
-  padding: 5px 20px; /* Adjust padding as needed */
-  background-color: #340e72; /* Adjust button color */
+  padding: 5px 20px; 
+  background-color: #340e72; 
   color: white;
   border: none;
   border-radius: 5px;
@@ -74,7 +74,7 @@
   margin-right: 0; /* Remove margin from the last link */
 }
 .nav-links a:hover {
-  background-color: #340e72; /* Adjust hover color */
+  background-color: #340e72; 
 }
 
 
@@ -83,22 +83,15 @@
 }
 
 .human-logo img {
-  width: 30px; /* Adjust size as needed */
-  height: 35px; /* Adjust size as needed */
+  width: 30px; 
+  height: 35px; 
 }
 
 
 
 
-
-
-
-
-
-
-
 .content {
-  flex-grow: 1; /* Fill remaining space */
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
 }
@@ -151,6 +144,45 @@
   background-color:#7a3595;
 }
 
+
+
+/* Ace Editor styles */
+.ace-editor {
+  width: 100%; 
+  height: 100%; 
+}
+
+.ace-editor .ace_content {
+  font-family: 'Courier New', Courier, monospace; 
+  font-size: 14px; 
+}
+
+.ace-editor .ace_gutter {
+  background-color: #d3c9c9; 
+  color: #efe3e3; 
+}
+
+.ace-editor .ace_marker-layer .ace_active-line {
+  background-color: #f5f5f5; 
+}
+
+.ace-editor .ace_marker-layer .ace_selection {
+  background-color: #add8e6; 
+}
+
+/* Customize Ace Editor theme */
+.ace-monokai .ace_gutter {
+  background-color: #272822; 
+  color: #d0d0d0; 
+}
+
+.ace-monokai .ace_marker-layer .ace_active-line {
+  background-color: #3e3d32; 
+}
+
+.ace-monokai .ace_marker-layer .ace_selection {
+  background-color: #49483e; 
+}
 
 
 
